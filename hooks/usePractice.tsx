@@ -134,6 +134,7 @@ export const useUpdatePracticeDay = () => {
 
             const newAchievements = await checkAchievements(practice, completedDays, supabase);
             if (newAchievements.length > 0) {
+
                 const { error: achievementError } = await supabase
                     .from('achievements')
                     .insert(newAchievements)
