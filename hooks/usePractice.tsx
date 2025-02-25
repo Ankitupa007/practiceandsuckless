@@ -12,6 +12,7 @@ export const practiceKeys = {
     all: ['practices'] as const,
     user: (userId: string | undefined) => [...practiceKeys.all, userId] as const,
     detail: (practiceId: string) => [...practiceKeys.all, practiceId] as const,
+
 };
 
 // Fetch user's practices
